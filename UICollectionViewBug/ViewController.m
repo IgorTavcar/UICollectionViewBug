@@ -23,6 +23,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:TRUE];
+	[[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSDefaultRunLoopMode];
 }
 
 - (void)tick {

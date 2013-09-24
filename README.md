@@ -1,7 +1,11 @@
-UICollectionViewBug
-=========
+24.09.2013
 
-Env: iOS7, iPad 
+Demo of a very annoying degradation bug!
+
+Context: iOS 7, iPad 3!
+
+Symptoms: do fast scrolling up and down for about 15 seconds or more … App will crash!
+
+Empirically proven: bug appears if collection view bounce is enabled and if collection view data is periodically reloading (see code)!
 
 
-Empirically proven
