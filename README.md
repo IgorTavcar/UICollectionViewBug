@@ -1,6 +1,6 @@
 24.09.2013
 
-Demo of a very annoying degradation bug!
+Demo of annoying bug with effect of sporadic app crashing!
 
 Context: iOS 7, iPad 3!
 
