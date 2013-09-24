@@ -2,13 +2,15 @@
 //  ViewController.m
 //  UICollectionViewBug
 //
-//  Created by tigor on 24. 09. 13.
+//  Created by tigor on 23. 09. 13.
 //  Copyright (c) 2013 RESONANCA IT d.o.o. All rights reserved.
 //
 
 #import "ViewController.h"
 
 @interface ViewController ()
+
+@property (strong, nonatomic) NSTimer *timer;
 
 @end
 
@@ -17,13 +19,35 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:TRUE];
+}
+
+- (void)tick {
+    [self.collectionView reloadData];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.timer invalidate];
+    self.timer = nil;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 10;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return [collectionView dequeueReusableCellWithReuseIdentifier:@"aCell" forIndexPath:indexPath];
+}
 @end

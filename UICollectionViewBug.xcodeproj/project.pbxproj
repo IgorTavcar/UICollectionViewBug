@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C300B6617F18F3900D66457 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1C300B6517F18F3900D66457 /* README.md */; };
 		1C5193BE17F18D1800A4DC85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5193BD17F18D1800A4DC85 /* Foundation.framework */; };
 		1C5193C017F18D1800A4DC85 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5193BF17F18D1800A4DC85 /* CoreGraphics.framework */; };
 		1C5193C217F18D1800A4DC85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5193C117F18D1800A4DC85 /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C300B6517F18F3900D66457 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1C5193BA17F18D1800A4DC85 /* UICollectionViewBug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewBug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C5193BD17F18D1800A4DC85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1C5193BF17F18D1800A4DC85 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +84,7 @@
 		1C5193B117F18D1800A4DC85 = {
 			isa = PBXGroup;
 			children = (
+				1C300B6517F18F3900D66457 /* README.md */,
 				1C5193C317F18D1800A4DC85 /* UICollectionViewBug */,
 				1C5193E217F18D1900A4DC85 /* UICollectionViewBugTests */,
 				1C5193BC17F18D1800A4DC85 /* Frameworks */,
@@ -230,6 +233,7 @@
 			files = (
 				1C5193D617F18D1900A4DC85 /* Images.xcassets in Resources */,
 				1C5193C817F18D1800A4DC85 /* InfoPlist.strings in Resources */,
+				1C300B6617F18F3900D66457 /* README.md in Resources */,
 				1C5193D117F18D1900A4DC85 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,6 +466,7 @@
 				1C5193EE17F18D1900A4DC85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C5193EF17F18D1900A4DC85 /* Build configuration list for PBXNativeTarget "UICollectionViewBugTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +475,7 @@
 				1C5193F117F18D1900A4DC85 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
