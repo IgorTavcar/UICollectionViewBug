@@ -30,7 +30,7 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self.timer invalidate];
+    [_timer invalidate];
     self.timer = nil;
 }
 
