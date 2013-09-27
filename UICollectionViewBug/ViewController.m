@@ -22,11 +22,21 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:TRUE];
+    // case A:
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.timer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:TRUE];
+        [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    });
+// case B:
+//    self.timer = [NSTimer timerWithTimeInterval:0.5 target:self selector:@selector(tick) userInfo:nil repeats:TRUE];
+//	[[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+    
+// case C:
+//    self.timer = [NSTimer scheduledTimerWithTimeInterval:<#(BOOL)#>:0.5 target:self selector:@selector(tick) userInfo:nil repeats:TRUE];
 }
 
 - (void)tick {
-    [self.collectionView reloadData];
+        [self.collectionView reloadData];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
